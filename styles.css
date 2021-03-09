@@ -27,6 +27,7 @@ tr:nth-child(even) {
 }
 
 h1 {
+    color: tomato;
     font-size: xx-large;
 }
 
