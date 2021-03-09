@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <header>
+        <title>HTML & CSS Cheatsheet</title>
+        <link href="./styles.css" type="text/css" rel="stylesheet">
+    </header>
+    <body>
+        <h1>Semantic HTML & CSS Selectors Reference</h1>
+        <div class="ref_table">
+            <h2>HTML Semantic Tags</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tag</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span id="code">&lt;title&gt;</span></td>
+                        <td>Title</td>
+                        <td>Second most important piece of content. Shown in the browser tab & search results.
+                            Should be unique for every page on the site.</td>
+                    </tr>
+                    <tr>
+                        <td><span id="code">&lt;header&gt;</span></td>
+                        <td>Header</td>
+                        <td>When inside &lt;body&gt; it’s the website masthead. When inside &lt;article&gt; it’s 
+                            the most important information</td>
+                    </tr>
+                    <tr>
+                        <td><span id="code">&lt;main&gt;</span></td>
+                        <td>Main</td>
+                        <td>Primary content of the page.</td>
+                    </tr>
+                    <tr>
+                        <td><span id="code">&lt;footer&gt;</span></td>
+                        <td>Footer</td>
+                        <td>When inside &lt;body&gt; it’s the website footer. When inside &lt;article&gt; it’s 
+                            the least important information</td>
+                    </tr>
+                    <tr>
+                        <td><span id="code">&lt;nav&gt;</span></td>
+                        <td>Navigation</td>
+                        <td>Defines a group as navigation links.</td>
+                    </tr>
+                    <tr>
+                        <td><span id="code">&lt;article&gt;</span></td>
+                        <td>Article</td>
+                        <td>A piece of content that's independent. Could be removed from this website
+                            and still make sense</td>
+                    </tr>
+                    <tr>
+                        <td><span id="code">&lt;section&gt;</span></td>
+                        <td>Section</td>
+                        <td>A group in a series of related content pieces.</td>
+                    </tr>
+                    <tr>
+                        <td><span id="code">&lt;aside&gt;</span></td>
+                        <td>Aside</td>
+                        <td>Secondary content not required to understand the main content.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="ref_table">
+            <h2>CSS Selectors</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Selector</th>
+                        <th>Example</th>
+                        <th>Example Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>.class</td>
+                        <td>.intro</td>
+                        <td>Selects all elements with class="intro"</td>
+                    </tr>
+                    <tr>
+                        <td>.class1.class2</td>
+                        <td>.name1.name2</td>
+                        <td>Selects all elements with both name1 and name2 set within its class attribute</td>
+                    </tr>
+                    <tr>
+                        <td>.class1 .class2</td>
+                        <td>.name1 .name2</td>
+                        <td>Selects all elements with name2 that is a descendant of an element with name1</td>
+                    </tr>
+                    <tr>
+                        <td>#id</td>
+                        <td>#name</td>
+                        <td>Selects the element with id="name"</td>
+                    </tr>
+                    <tr>
+                        <td>*</td>
+                        <td>*</td>
+                        <td>Selects all elements</td>
+                    </tr>
+                    <tr>
+                        <td>element</td>
+                        <td>p</td>
+                        <td>Selects all &lt;p&gt; elements</td>
+                    </tr>
+                    <tr>
+                        <td>element.class</td>
+                        <td>p.intro</td>
+                        <td>Selects all &lt;p&gt; elements with class="intro"</td>
+                    </tr>
+                    <tr>
+                        <td>element, element</td>
+                        <td>div, p</td>
+                        <td>Selects all &lt;div&gt; elements and all &lt;p&gt; elements</td>
+                    </tr>
+                    <tr>
+                        <td>element element</td>
+                        <td>div p</td>
+                        <td>Selects all &lt;p&gt; elements inside &lt;div&gt; elements</td>
+                    </tr>
+                    <tr>
+                        <td>element > element</td>
+                        <td>div > p</td>
+                        <td>Selects all &lt;p&gt; elements where the parent is a &lt;div&gt; element</td>
+                    </tr>
+                    <tr>
+                        <td>element + element</td>
+                        <td>div + p</td>
+                        <td>Selects the first &lt;p&gt; element that is placed immediately after &lt;div&gt; elements</td>
+                    </tr>
+                    <tr>
+                        <td>element1 ~ element2</td>
+                        <td>p ~ ul</td>
+                        <td>Selects every &lt;ul&gt; element that are preceded by a &lt;p&gt; element</td>
+                    </tr>
+                    <tr>
+                        <td>[attribute]</td>
+                        <td>[target]</td>
+                        <td>Selects all elements with a target attribute</td>
+                    </tr>
+                    <tr>
+                        <td>[attribute=value]</td>
+                        <td>[target=_blank]</td>
+                        <td>Selects all elements with target="_blank"</td>
+                    </tr>
+                    <tr>
+                        <td>[attribute~=value]</td>
+                        <td>[title~=flower]</td>
+                        <td>Selects all elements with a title attribute containing the word "flower"</td>
+                    </tr>
+                    <tr>
+                        <td>[attribute|=value]/td>
+                        <td>[lang|=en]</td>
+                        <td>Selects all elements with a lang attribute value starting with "en"/td>
+                    </tr>
+                    <tr>
+                        <td>element[attribute^=value]</td>
+                        <td>a[href^="https"]</td>
+                        <td>Selects every &lt;a&gt; element whose href attribute value begins with "https"</td>
+                    </tr>
+                    <tr>
+                        <td>element[attribute$=value]</td>
+                        <td>a[href$=".pdf"]</td>
+                        <td>Selects every &lt;a&gt; element whose href attribute value ends with ".pdf"</td>
+                    </tr>
+                    <tr>
+                        <td>element[attribute*=value]</td>
+                        <td>a[href*="facebook"]</td>
+                        <td>Selects every &lt;a&gt; element whose href attribute value contains the substring "w3schools"</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>    
+    </body>
+</html>
